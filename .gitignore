@@ -5,11 +5,11 @@ node_modules/
 dist/
 .angular/
 
-# Environment variables (keeps your secrets safe)
-.env
-
 # Editor and system files
 .vscode/
 .idea/
 Thumbs.db
 .DS_Store
+
+# Local database file (from task 3)
+database.sqlite
