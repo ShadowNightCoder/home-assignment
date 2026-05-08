@@ -1,0 +1,114 @@
+.login-container {
+display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+
+  /* Force this div to fill the parent (app-main) entirely */
+  flex: 1;
+  width: 100%;
+
+  /* Your bank background */
+  background: radial-gradient(circle at top right, #edf2f7, #cbd5e0);
+
+  .login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 3.5rem;
+    width: 100%;
+    max-width: 500px; // Bigger cards
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      margin-bottom: 2.5rem;
+      text-align: center;
+
+      h2 { 
+        font-size: 1.8rem; 
+        color: #1a202c;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      
+      .badge {
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+      }
+    }
+
+    .input-group {
+      margin-bottom: 2rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.75rem;
+        color: #4a5568;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 16px 20px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        background: #f8fafc;
+        transition: all 0.2s;
+
+        &:focus {
+          outline: none;
+          border-color: #004080;
+          background: white;
+          box-shadow: 0 0 0 4px rgba(0, 64, 128, 0.1);
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 18px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  }
+}
+
+.vulnerable {
+  border-top: 8px solid #e53e3e;
+  .badge { background: #e53e3e; }
+  .btn { 
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    &:hover { background: #af2626; }
+  }
+}
+
+.secure {
+  border-top: 8px solid #2f855a;
+  .badge { background: #2f855a; }
+  .btn { 
+    background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
+    &:hover { background: #22543d; }
+  }
+}

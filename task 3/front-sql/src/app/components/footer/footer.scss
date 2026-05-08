@@ -1,0 +1,41 @@
+.bank-footer {
+  margin-top: auto; 
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 1.15rem;
+    }
+
+    .credit {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.4rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 20px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      &::before {
+        content: '👨‍💻 ';
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
