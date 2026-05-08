@@ -8,13 +8,17 @@
     <form>
       <div class="input-group">
         <label>Username</label>
-        <input type="text" placeholder="Enter username">
+        <input type="text" [(ngModel)]="vulnerableUser.username" name="vUser" placeholder="Enter username">
       </div>
       <div class="input-group">
         <label>Password</label>
-        <input type="password" placeholder="Enter password">
+        <input type="password" [(ngModel)]="vulnerableUser.password" name="vPass" placeholder="Enter password">
       </div>
-      <button type="button" class="btn btn-danger">Login</button>
+      <button type="button" class="btn btn-danger" (click)="testVulnerable()">Login</button>
+      
+      <p *ngIf="vIsSuccess !== null" [ngClass]="vIsSuccess ? 'msg-ok' : 'msg-err'">
+        {{ vMessage }}
+      </p>
     </form>
   </div>
 
@@ -26,13 +30,17 @@
     <form>
       <div class="input-group">
         <label>Username</label>
-        <input type="text" placeholder="Enter username">
+        <input type="text" [(ngModel)]="secureUser.username" name="sUser" placeholder="Enter username">
       </div>
       <div class="input-group">
         <label>Password</label>
-        <input type="password" placeholder="Enter password">
+        <input type="password" [(ngModel)]="secureUser.password" name="sPass" placeholder="Enter password">
       </div>
-      <button type="button" class="btn btn-primary">Login</button>
+      <button type="button" class="btn btn-primary" (click)="testSecure()">Login</button>
+
+      <p *ngIf="sIsSuccess !== null" [ngClass]="sIsSuccess ? 'msg-ok' : 'msg-err'">
+        {{ sMessage }}
+      </p>
     </form>
   </div>
 

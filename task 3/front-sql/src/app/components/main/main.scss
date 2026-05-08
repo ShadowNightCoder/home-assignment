@@ -6,11 +6,9 @@ display: flex;
   padding: 2rem;
   flex-wrap: wrap;
 
-  /* Force this div to fill the parent (app-main) entirely */
   flex: 1;
   width: 100%;
 
-  /* Your bank background */
   background: radial-gradient(circle at top right, #edf2f7, #cbd5e0);
 
   .login-card {
@@ -18,7 +16,7 @@ display: flex;
     border-radius: 16px;
     padding: 3.5rem;
     width: 100%;
-    max-width: 500px; // Bigger cards
+    max-width: 500px; 
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease;
@@ -111,4 +109,24 @@ display: flex;
     background: linear-gradient(135deg, #2f855a 0%, #276749 100%);
     &:hover { background: #22543d; }
   }
+}
+
+.msg-ok {
+  color: #2f855a;
+  background: #f0fff4;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.msg-err {
+  color: #c53030;
+  background: #fff5f5;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
 }
