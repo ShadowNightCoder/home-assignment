@@ -1,0 +1,26 @@
+<div class="result-container" *ngIf="result">
+  
+  <div class="status-panel clean" *ngIf="!result.isPhishing">
+    <div class="icon-box">✓</div>
+    <div class="details">
+      <h3>SYSTEM SECURE</h3>
+      <p>Target: <strong>{{ fileName }}</strong></p>
+      <span class="status-text">No phishing indicators detected.</span>
+    </div>
+  </div>
+
+  <div class="status-panel danger" *ngIf="result.isPhishing">
+    <div class="icon-box warning-blink">!</div>
+    <div class="details">
+      <h3>THREAT DETECTED</h3>
+      <p>Target: <strong>{{ fileName }}</strong></p>
+      <span class="status-text threat">Phishing indicators isolated:</span>
+      <ul class="indicator-list">
+        <li *ngFor="let item of result.indicators">
+          <span class="bullet">>_</span> {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

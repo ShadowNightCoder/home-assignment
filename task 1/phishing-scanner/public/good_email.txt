@@ -1,0 +1,12 @@
+Subject: Meeting Agenda for Tomorrow
+
+Hi Bar,
+
+Just a quick reminder that our weekly development sync is scheduled for tomorrow at 10:00 AM. 
+
+Please review the attached PDF notes from last week's meeting before we start. We will be discussing the new UI updates and the timeline for the next sprint.
+
+Let me know if you have any questions.
+
+Best regards,
+The Development Team

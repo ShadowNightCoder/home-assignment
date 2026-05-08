@@ -1,0 +1,20 @@
+<main class="cyber-main">
+  <div class="scanner-container">
+    <div class="scanner-header">
+      <h2>THREAT_ANALYSIS_MODULE</h2>
+      <p>UPLOAD .TXT FILE TO SCAN FOR PHISHING ANOMALIES</p>
+    </div>
+
+    <div class="upload-zone">
+      <div class="scan-line"></div>
+      <label class="custom-file-upload">
+        <input type="file" accept=".txt" (change)="onFileSelected($event)">
+        <span class="upload-icon">⇪</span>
+        <span class="upload-text">INITIALIZE UPLOAD</span>
+      </label>
+    </div>
+
+    <app-result [result]="scanResult" [fileName]="fileName">
+    </app-result>
+  </div>
+</main>

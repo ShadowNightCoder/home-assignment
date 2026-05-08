@@ -1,0 +1,13 @@
+Subject: URGENT: Account Suspended!
+
+Dear user,
+
+Action required immediately. Your account has been suspended due to suspicious login attempts from an unrecognized device.
+
+Please contact our security team at security@paypa1.com to verify your account details.
+
+To restore access and prevent permanent deletion, log in directly via our secure server link below:
+http://192.168.45.22/login
+
+Thank you,
+The Security Team

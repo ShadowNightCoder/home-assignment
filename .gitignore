@@ -1,0 +1,15 @@
+# Node dependencies
+node_modules/
+
+# Angular build outputs and cache
+dist/
+.angular/
+
+# Environment variables (keeps your secrets safe)
+.env
+
+# Editor and system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
