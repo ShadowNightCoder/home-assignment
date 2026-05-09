@@ -10,12 +10,12 @@ Before running the project, make sure you have the following installed:
 - npm
 - Angular CLI
 
-## How to Run the Frontend
+## How to Run the Front
 
-1. Open a terminal and navigate to the `frontend` folder:
+1. Open a terminal and navigate to the `front-sql` folder:
 
 ```bash
-cd frontend
+cd front-sql
 ```
 
 2. Install all required dependencies:

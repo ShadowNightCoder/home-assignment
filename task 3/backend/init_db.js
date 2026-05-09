@@ -5,7 +5,7 @@ const db = new sqlite3.Database('./database.sqlite', (err) => {
     if (err) {
         console.error('Error opening database', err.message);
     } else {
-        console.error('Connected to the SQLite database.');
+        console.log('Connected to the SQLite database.');
         
         db.run(`CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -18,7 +18,7 @@ const db = new sqlite3.Database('./database.sqlite', (err) => {
                 console.log('Table "users" ready.');
                 
                 const insert = 'INSERT OR IGNORE INTO users (username, password) VALUES (?, ?)';
-                db.run(insert, ['admin', 'superSecret123'], (err) => {
+                db.run(insert, ['admin', 'superSecret123'], (err) => { //my admin username and password is the only thing in that database
                     if (err) {
                         console.error('Error inserting user', err.message);
                     } else {

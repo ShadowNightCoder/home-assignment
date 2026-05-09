@@ -13,8 +13,8 @@ It fulfills the requirements for Assignment 1 of the home assignment, including 
 
 ## Test Files Included
 To make reviewing and testing this project as easy as possible, I have included sample test files in the `public` folder:
-* `bad_email.txt`: Contains simulated phishing indicators.
-* `good_email.txt`: Contains safe, normal email text.
+* `bad_email.txt and bad_email2.txt`: Contains simulated phishing indicators.
+* `good_email.txt and good_email2.txt`: Contains safe, normal email text.
 Feel free to upload these directly into the UI to see the detection engine in action!
 
 ## Tech Stack
