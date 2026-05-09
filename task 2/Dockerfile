@@ -1,0 +1,18 @@
+# Use Ubuntu as the base operating system for our sandbox
+FROM ubuntu:latest
+
+# Update system and install Python3 and inotify-tools (for monitoring file changes)
+RUN apt-get update && apt-get install -y \
+    python3 \
+    inotify-tools \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a working directory inside the container
+WORKDIR /sandbox
+
+# Copy the Angular honeypot project into the container
+# Note: We assume node_modules is excluded (or not copied) to save space
+COPY bank_project/ ./bank_project/
+
+# Keep the container running in the background infinitely
+CMD ["tail", "-f", "/dev/null"]

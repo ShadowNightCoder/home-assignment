@@ -1,0 +1,10 @@
+# Ignore Angular/Node massive folders
+bank-project/node_modules/
+bank-project/.angular/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Git history (if you are using git)
+.git/

@@ -1,0 +1,5 @@
+Bitcoin Cold Storage Recovery Phrase:
+
+apple banana cat dog elephant frog guitar house iron jump kite lion
+
+WARNING: DO NOT UPLOAD TO THE CLOUD.

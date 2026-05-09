@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* Base & Typography */
+.crypto-container {
+  font-family: 'Outfit', sans-serif;
+  background-color: #f8fafc; /* Very light, clean grey/blue */
+  color: #1e293b; /* Dark slate for easy reading */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Beautiful gradient text for highlights */
+.highlight {
+  background: linear-gradient(90deg, #f7931a 0%, #ffb347 100%); /* Bitcoin Orange */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Header - Light Glassmorphism */
+.crypto-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #0f172a;
+}
+
+.crypto-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.crypto-header a {
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.crypto-header a:hover {
+  color: #f7931a; /* Orange hover */
+}
+
+/* Main Content Area */
+.crypto-main {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 8rem 2rem;
+  background: radial-gradient(circle at top right, #fff5e6 0%, #f8fafc 50%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #f7931a 0%, #f59e0b 100%);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px; /* Fully rounded pill button */
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(247, 147, 26, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(247, 147, 26, 0.4);
+}
+
+/* About Section */
+.about-section {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+.about-section p {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 6rem 2rem;
+  background-color: #f1f5f9;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #0f172a;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Base Card Styling */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Specific Card Hover Colors */
+.card-orange:hover {
+  border-color: #f7931a;
+  box-shadow: 0 15px 35px rgba(247, 147, 26, 0.15);
+}
+
+.card-purple:hover {
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+}
+
+.card-green:hover {
+  border-color: #10b981;
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.15);
+}
+
+.card-image-wrapper {
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Footer */
+.crypto-footer {
+  background-color: #ffffff;
+  color: #64748b;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #0f172a;
+}

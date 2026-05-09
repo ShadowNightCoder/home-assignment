@@ -1,0 +1,11 @@
+CONFIDENTIAL - HIGH NET WORTH CLIENTS
+
+Client: John Doe
+Account: 9876-5432-1098-7654
+Balance: $1,250,000.00
+Routing Number: 011000015
+
+Client: Jane Smith
+Account: 1122-3344-5566-7788
+Balance: $840,300.00
+Routing Number: 011000015
