@@ -4,6 +4,7 @@ from docker_manager import SandboxManager
 
 manager = SandboxManager()
 
+# i use tkinter for the gui, each button do other function and give different response (used basic css)
 def start_sandbox_ui():
     log_area.insert(tk.END, "Starting Sandbox...\n")
     window.update()

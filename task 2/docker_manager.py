@@ -7,10 +7,11 @@ class SandboxManager:
     def __init__(self):
         self.client = docker.from_env()
         self.container = None
-        self.image_name = "malware-sandbox-image"
+        self.image_name = "malware-sandbox-image" #the name i set for the image when it create it 
         self.container_name = "Nexus_Malware_Sandbox"
 
-    def _safe_cleanup(self):
+    #its a look for containers that already run under the same container name so it kill tham
+    def _safe_cleanup(self): 
         try:
             old = self.client.containers.get(self.container_name)
             old.stop()
@@ -18,6 +19,10 @@ class SandboxManager:
         except:
             pass
 
+    # so this is the setup for the sandbox environment(its build the image from the dockerfile,
+    # make the image run the create container and it keeps it)
+    # it create a listening to the things that happened in the contain and put it into logs 
+    # (similar to wireshark that listen to the network)
     def build_and_start(self):
         try:
             self._safe_cleanup()
@@ -34,6 +39,8 @@ class SandboxManager:
         except Exception as e:
             return str(e)
 
+    # this is the function that send the malware (it make sure the container is runing), 
+    # the full malware with all its functions in the dummy_malware file
     def run_malware_test(self):
         try:
             self.container = self.client.containers.get(self.container_name)
@@ -52,6 +59,8 @@ class SandboxManager:
         except Exception as e:
             return str(e)
 
+    # its takes all the information and the damage that has been done and report it (it says what the malware had done)
+    # its read from the log file in the container, use ps aux that give like a screen shoot of all the process that run in the linux
     def generate_report(self):
         try:
             self.container = self.client.containers.get(self.container_name)
@@ -77,6 +86,7 @@ class SandboxManager:
         except Exception as e:
             return str(e)
 
+    # this kill the container while it write in the gui: Stopping Sandbox...
     def stop_sandbox(self):
         try:
             self._safe_cleanup()
