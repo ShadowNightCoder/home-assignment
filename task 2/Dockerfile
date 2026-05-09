@@ -12,7 +12,7 @@ WORKDIR /sandbox
 
 # Copy the Angular honeypot project into the container
 # Note: We assume node_modules is excluded (or not copied) to save space
-COPY bank_project/ ./bank_project/
+COPY bank-project/ ./bank-project/
 
 # Keep the container running in the background infinitely
 CMD ["tail", "-f", "/dev/null"]
