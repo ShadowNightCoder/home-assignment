@@ -27,10 +27,11 @@ The Angular project inside the `bank-project` folder is used as bait for the mal
 1. **Docker Desktop** (Must be open and running).
 2. **Python 3.x**
 3. Install the Docker Python library:
-   ```bash
+```bash
    pip install docker
 
 ```
+
 
 ## How to Run the Sandbox
 
@@ -39,7 +40,6 @@ The Angular project inside the `bank-project` folder is used as bait for the mal
 python gui.py
 
 ```
-
 
 2. You will now see the GUI control panel. Use the buttons in order (1 to 4) to start the sandbox, execute the malware, generate the analysis report, and cleanly stop the environment.
 

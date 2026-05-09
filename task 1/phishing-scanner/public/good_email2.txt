@@ -1,0 +1,15 @@
+From: notifications@github.com
+Date: May 9, 2026
+Subject: Welcome to your new repository
+
+Hi Bar,
+
+Thanks for creating your new Angular web application repository! We are excited to see what you build for your home assignment.
+
+Whenever you have a moment, we recommend setting up branch protections to keep your main codebase clean and secure. You can read our full guide on repository management by visiting our documentation at:
+https://docs.github.com/en/repositories
+
+If you have any questions, feel free to reach out to our support community. 
+
+Happy coding!
+The GitHub Team

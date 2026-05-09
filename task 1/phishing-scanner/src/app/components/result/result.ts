@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './result.scss',
 })
 export class Result {
+  // its a child component so i use angular inout to pass down the result
   @Input() result: ScanResult | null = null;
   @Input() fileName: string = '';
 }

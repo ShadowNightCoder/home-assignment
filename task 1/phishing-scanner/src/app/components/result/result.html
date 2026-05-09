@@ -1,5 +1,5 @@
 <div class="result-container" *ngIf="result">
-  
+
   <div class="status-panel clean" *ngIf="!result.isPhishing">
     <div class="icon-box">✓</div>
     <div class="details">
@@ -16,9 +16,11 @@
       <p>Target: <strong>{{ fileName }}</strong></p>
       <span class="status-text threat">Phishing indicators isolated:</span>
       <ul class="indicator-list">
-        <li *ngFor="let item of result.indicators">
+        @for (item of result.indicators; track $index) {
+        <li>
           <span class="bullet">>_</span> {{ item }}
         </li>
+        }
       </ul>
     </div>
   </div>

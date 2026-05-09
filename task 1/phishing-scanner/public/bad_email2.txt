@@ -1,0 +1,17 @@
+From: security-alert@paypa1.com
+Date: May 9, 2026
+Subject: URGENT: Action Required - Account Suspended
+
+Dear Customer,
+
+This is an URGENT notification regarding your recent transactions. We have detected unauthorized login attempts from a foreign IP address. As a security precaution, your account suspended pending further review. 
+
+ACTION REQUIRED: You must verify your account immediately to prevent permanent deletion of your data and funds. 
+
+Please log in to our secure resolution center using the direct server link below:
+http://192.168.45.22/secure/auth/login
+
+If you do not complete this verification IMMEDIATELY, your account will be permanently locked and reported to the authorities. 
+
+Thank you,
+The Security Team
