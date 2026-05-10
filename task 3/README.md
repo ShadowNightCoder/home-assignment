@@ -11,9 +11,6 @@ This confirms the application handles valid credentials correctly as stored in t
 ### 🔴 The "Bad Run" (Vulnerable Login)
 This demonstrates a successful SQL injection attack that bypasses the authentication logic entirely. You can attack either the password or the username field:
 
-### 🔴 The "Bad Run" (Vulnerable Login)
-This demonstrates a successful SQL injection attack that bypasses the authentication logic entirely. You can attack either the password or the username field:
-
 **Option A: Attack the Password Field**
 1. Go to the **Legacy System** card in the UI.
 2. **Username:** *(Enter absolutely any text)*
